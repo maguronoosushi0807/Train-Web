@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+      <meta charset="UTF-8">
+
+      <title>TrainWidget</title>
+
+      <!-- font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+
+      <!-- css -->
+      <link href="asset/reset.css" rel="stylesheet">
+      <link href="asset/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <div class="header">
+      <!-- <button onclick="changeContent()"></button> -->
+      <h1 onclick="changeLocation()" id="locations">Iwade to Miyamae</h1>
+      <img src="asset/reload_icon.svg" class="reload" onclick="update()">
+    </div>
+    <!-- 候補 -->
+    <!-- 1個目 -->
+    <div class="train">
+      <div class="information">
+        <div class="time">
+          <div class="leave">
+            <p id="leave-1">7:51</p>
+          </div>
+          <div class="arrow">
+            <p>→</p>
+          </div>
+          <div class="arrive">
+            <p id="arrive-1">8:10</p>
+          </div>
+        </div>
+
+        <div class="waiting">
+          <p id="waiting-1">21min - ( 5% waiting )</p>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div class="iwade" id="iwade-1"></div>
+        <div class="wakayama" id="wakayama-1"></div>
+        <div class="miyamae" id="miyamae-1"></div>
+      </div>
+    </div>
+
+    
+    <!-- 2個目 -->
+    <div class="train">
+      <div class="information">
+        <div class="time">
+          <div class="leave">
+            <p id="leave-2">7:51</p>
+          </div>
+          <div class="arrow">
+            <p>→</p>
+          </div>
+          <div class="arrive">
+            <p id="arrive-2">8:10</p>
+          </div>
+        </div>
+
+        <div class="waiting">
+          <p id="waiting-2">21min - ( 5% waiting )</p>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div class="iwade" id="iwade-2"></div>
+        <div class="wakayama" id="wakayama-2"></div>
+        <div class="miyamae" id="miyamae-2"></div>
+      </div>
+    </div>
+    
+    <!-- 3個目 -->
+    <div class="train">
+      <div class="information">
+        <div class="time">
+          <div class="leave">
+            <p id="leave-3">7:51</p>
+          </div>
+          <div class="arrow">
+            <p>→</p>
+          </div>
+          <div class="arrive">
+            <p id="arrive-3">8:10</p>
+          </div>
+        </div>
+
+        <div class="waiting">
+          <p id="waiting-3">21min - ( 5% waiting )</p>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div class="iwade" id="iwade-3"></div>
+        <div class="wakayama" id="wakayama-3"></div>
+        <div class="miyamae" id="miyamae-3"></div>
+      </div>
+    </div>
+    
+    <!-- 4個目 -->
+    <div class="train">
+      <div class="information">
+        <div class="time">
+          <div class="leave">
+            <p id="leave-4">7:51</p>
+          </div>
+          <div class="arrow">
+            <p>→</p>
+          </div>
+          <div class="arrive">
+            <p id="arrive-4">8:10</p>
+          </div>
+        </div>
+
+        <div class="waiting">
+          <p id="waiting-4">21min - ( 5% waiting )</p>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div class="iwade" id="iwade-4"></div>
+        <div class="wakayama" id="wakayama-4"></div>
+        <div class="miyamae" id="miyamae-4"></div>
+      </div>
+    </div>
+
+    <div id="test" onclick="load()">Test</div>
+    <script src="asset/script.js"></script>
+  </body>
+</html>
