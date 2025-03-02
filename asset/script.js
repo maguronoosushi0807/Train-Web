@@ -259,9 +259,13 @@ function update(){
     }
   }
 
-  for(let i=count;i<4;i++){
+  for(let i=0;i<4;i++){
     let num = i+1;
-    document.getElementById("train-"+num).style.display = "none";
+    if(i<count){
+      document.getElementById("train-"+num).style.display = "";
+    }else{
+      document.getElementById("train-"+num).style.display = "none";
+    }
   }
 
   let last = leave_1[0].time - time;
@@ -274,14 +278,22 @@ function update(){
     probability = 100 * (last - minimum) / (maximum-minimum);
     // probability = leave_1[0].time - time;
   }else{
-    maximum = 12;
+    maximum = 14;
     minimum = 8;
     probability = 100 * (last - minimum) / (maximum-minimum);
   }
+  probability = Math.round(probability);
   if(probability > 100) probability = 100;
   if(probability < 0) probability   = 0;
   document.getElementById("probability").textContent = probability+"%";
   document.getElementById("last")       .textContent = "last: "+last+"min";
+  if(count == 0){
+    document.getElementById("status").style.display = "none";
+    document.getElementById("no-train").style.display = "";
+  }else{
+    document.getElementById("status").style.display = "";
+    document.getElementById("no-train").style.display = "none";
+  }
 
 
   document.getElementById("test").textContent = leave_1[0].hour+":"+("00"+leave_1[0].min).slice(-2)+" → "+arrive_2[0].hour+":"+("00"+arrive_2[0].min).slice(-2)+" _ location:"+duration_1[0]+"("+is_rapid_1[0]+") - wait:"+waiting[0]+" - destination:"+duration_2[0]+"("+is_rapid_2[0]+")"+" _ total:"+total[0];

@@ -117,7 +117,7 @@ body{
 
 
 
-.status{
+#status{
   display: flex;
   align-items: flex-end;
   margin-top: 0.8rem;
@@ -134,4 +134,10 @@ body{
   color: #f2f0f1;
   font-size: 1.6rem;
   font-weight: 300;
+}
+
+#no-train{
+  color: #FF831F;
+  font-size: 2rem;
+  /* text-align: center; */
 }
