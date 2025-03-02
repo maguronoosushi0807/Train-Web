@@ -22,9 +22,11 @@
       <h1 onclick="changeLocation()" id="locations">Iwade to Miyamae</h1>
       <img src="asset/reload_icon.svg" class="reload" onclick="update()">
     </div>
+
+
     <!-- 候補 -->
     <!-- 1個目 -->
-    <div class="train">
+    <div class="train", id="train-1">
       <div class="information">
         <div class="time">
           <div class="leave">
@@ -52,7 +54,7 @@
 
     
     <!-- 2個目 -->
-    <div class="train">
+    <div class="train", id="train-2">
       <div class="information">
         <div class="time">
           <div class="leave">
@@ -79,7 +81,7 @@
     </div>
     
     <!-- 3個目 -->
-    <div class="train">
+    <div class="train", id="train-3">
       <div class="information">
         <div class="time">
           <div class="leave">
@@ -106,7 +108,7 @@
     </div>
     
     <!-- 4個目 -->
-    <div class="train">
+    <div class="train", id="train-4">
       <div class="information">
         <div class="time">
           <div class="leave">
@@ -129,6 +131,15 @@
         <div class="iwade" id="iwade-4"></div>
         <div class="wakayama" id="wakayama-4"></div>
         <div class="miyamae" id="miyamae-4"></div>
+      </div>
+    </div>
+
+    <div class="status">
+      <div id="probability">
+        <p>5%</p>
+      </div>
+      <div id="last">
+        last:2min
       </div>
     </div>
 

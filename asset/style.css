@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 html{
-  font-size: 160%;
+  font-size: 110%;
 }
 
 body{
@@ -47,6 +47,10 @@ body{
   display: flex;
   font-weight: 600;
   font-size: 3.2rem;
+}
+
+.leave{
+  color: #FF831F;
 }
 
 .arrow{
@@ -109,4 +113,25 @@ body{
   font-size: 2rem;
 
   display: none;
+}
+
+
+
+.status{
+  display: flex;
+  align-items: flex-end;
+  margin-top: 0.8rem;
+}
+
+#probability{
+  color: #f2f0f1;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#last{
+  margin-left: 1.6rem;
+  color: #f2f0f1;
+  font-size: 1.6rem;
+  font-weight: 300;
 }

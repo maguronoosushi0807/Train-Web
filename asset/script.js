@@ -174,6 +174,7 @@ function update(){
       }
     }
   }
+
   // 宮前から岩出
   else{
     // 宮前から和歌山
@@ -256,8 +257,32 @@ function update(){
       document.getElementById("iwade-"  +num).style.backgroundColor = blue;
       document.getElementById("miyamae-"+num).style.backgroundColor = pink;
     }
-
   }
+
+  for(let i=count;i<4;i++){
+    let num = i+1;
+    document.getElementById("train-"+num).style.display = "none";
+  }
+
+  let last = leave_1[0].time - time;
+  let probability = 0;
+  let maximum = 0;
+  let minimum = 0;
+  if(loc_now == "Iwade"){
+    maximum = 12;
+    minimum = 8;
+    probability = 100 * (last - minimum) / (maximum-minimum);
+    // probability = leave_1[0].time - time;
+  }else{
+    maximum = 12;
+    minimum = 8;
+    probability = 100 * (last - minimum) / (maximum-minimum);
+  }
+  if(probability > 100) probability = 100;
+  if(probability < 0) probability   = 0;
+  document.getElementById("probability").textContent = probability+"%";
+  document.getElementById("last")       .textContent = "last: "+last+"min";
+
 
   document.getElementById("test").textContent = leave_1[0].hour+":"+("00"+leave_1[0].min).slice(-2)+" → "+arrive_2[0].hour+":"+("00"+arrive_2[0].min).slice(-2)+" _ location:"+duration_1[0]+"("+is_rapid_1[0]+") - wait:"+waiting[0]+" - destination:"+duration_2[0]+"("+is_rapid_2[0]+")"+" _ total:"+total[0];
 
