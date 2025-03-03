@@ -155,8 +155,6 @@ function update(){
     count = 0;
     for(let i=0;i<WtM.length;i++){
       if(arrive_1[count] <= WtM[i].time){
-        i--;
-
         let duration = 3;
         let time = WtM[i].time + duration;
         let min  = time%60;
@@ -202,8 +200,6 @@ function update(){
     count = 0;
     for(let i=0;i<WtI.length;i++){
       if(arrive_1[count] <= WtI[i].time){
-        i--;
-
         let duration = 22;
         let is_rapid = false;
         if(WtI[i].is_rapid){
